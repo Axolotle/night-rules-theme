@@ -1,0 +1,30 @@
+/*┌─╴╭─╮╭╮╷╶┬╴╭─╴
+  ├─╴│ ││││ │ ╰─╮
+  ╵  ╰─╯╵╰╯ ╵ ╶─╯*/
+  @font-face {
+    font-family: 'Hack';
+    src: url('../fonts/hack-regular-webfont.woff2?v=2.020') format('woff2'), url('../fonts/hack-regular-webfont.woff?v=2.020') format('woff'), url('../fonts/hack-regular-webfont.ttf?v=2.020') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Hack';
+    src: url('../fonts/hack-bold-webfont.woff2?v=2.020') format('woff2'), url('../fonts/hack-bold-webfont.woff?v=2.020') format('woff'), url('../fonts/hack-bold-webfont.ttf?v=2.020') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Hack';
+    src: url('../fonts/hack-italic-webfont.woff2?v=2.020') format('woff2'), url('../fonts/hack-italic-webfont.woff?v=2.020') format('woff'), url('../fonts/hack-italic-webfont.ttf?v=2.020') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Hack';
+    src: url('../fonts/hack-bolditalic-webfont.woff2?v=2.020') format('woff2'), url('../fonts/hack-bolditalic-webfont.woff?v=2.020') format('woff'), url('../fonts/hack-bolditalic-webfont.ttf?v=2.020') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+  }

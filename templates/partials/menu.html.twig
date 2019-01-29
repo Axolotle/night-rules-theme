@@ -1,0 +1,14 @@
+<a id="logo" href="{{ base_url == '' ? '/' : base_url }}">
+    <img src="{{ url('theme://images/logo-regles-white.png') }}" alt="{{ site.name }}">
+    <h1 id="title">{{ config.site.title }}</h1>
+</a>
+<ul>
+    {% for p in pages.find('/home').children.visible %}
+        {% set current_page = (p.active or p.activeChild) ? 'selected' : '' %}
+            <li class="{{ current_page }}">
+                <a href="{{ p.url }}">
+                    {{ p.menu }}
+                </a>
+            </li>
+    {% endfor %}
+</ul>

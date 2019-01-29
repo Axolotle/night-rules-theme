@@ -1,0 +1,29 @@
+@import 'base';
+
+nav {
+    color: white;
+    width: 40%;
+
+    &.alone {
+        width: 100%;
+    }
+
+    #logo img {
+        max-width: 15rem;
+        max-height: 15rem;
+    }
+
+    #title {
+        position: absolute;
+        top: -10em;
+    }
+}
+
+main {
+    background-color: white;
+    width: 60%;
+}
+
+
+
+@import 'fonts';
