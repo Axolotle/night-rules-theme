@@ -1,0 +1,31 @@
+main {
+    width: 65%;
+    height: 100%;
+    margin-left: auto;
+    padding: 5rem 0;
+    display: flex;
+
+    .container {
+        max-width: 50rem;
+        margin: auto;
+    }
+
+    &::before {
+        content: ' ';
+        z-index: -1;
+        border-radius: 50%;
+        background-color: white;
+        position: fixed;
+        left: 30vmax;
+        top: -32.5vmax;
+        width: 130vmax;
+        height: 130vmax;
+    }
+
+    h2 {
+        font-size: 2.75rem;
+        font-weight: bold;
+        font-style: italic;
+        border-bottom: black solid 1rem;
+    }
+}

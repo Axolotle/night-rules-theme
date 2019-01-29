@@ -8,11 +8,19 @@
 
 :root {
     font-family: Hack, monospace;
-    font-size: 0.8em;
-    line-height: 1.2rem;
+    font-size: 0.9em;
     color: black;
 }
 
+ol, ul, li {
+	list-style: none;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin: 1rem 0;
+}
 
 html, body {
     width: 100%;
@@ -23,4 +31,27 @@ body {
     font-size: 1rem;
     display: flex;
     background-color: black;
+}
+
+
+.white {
+    a {
+        &, &:link, &:visited {
+            color: white;
+        }
+        &:hover, &:active {
+            color: yellow;
+        }
+    }
+}
+
+.black {
+    a {
+        &, &:link, &:visited {
+            color: black;
+        }
+        &:hover, &:active {
+            color: yellow;
+        }
+    }
 }

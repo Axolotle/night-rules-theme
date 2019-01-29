@@ -1,14 +1,28 @@
-<a id="logo" href="{{ base_url == '' ? '/' : base_url }}">
-    <img src="{{ url('theme://images/logo-regles-white.png') }}" alt="{{ site.name }}">
-    <h1 id="title">{{ config.site.title }}</h1>
-</a>
-<ul>
-    {% for p in pages.find('/home').children.visible %}
-        {% set current_page = (p.active or p.activeChild) ? 'selected' : '' %}
-            <li class="{{ current_page }}">
-                <a href="{{ p.url }}">
-                    {{ p.menu }}
-                </a>
-            </li>
-    {% endfor %}
+<ul class="white">
+    <li>
+        <a id="logo" href="{{ base_url == '' ? '/' : base_url }}">
+            <img src="{{ url('theme://images/logo-regles-white.png') }}" alt="{{ site.name }}">
+            <h1 id="title">{{ config.site.title }}</h1>
+        </a>
+    </li>
+    <li class="part">
+        <ul>
+            {% for p in pages.find('/home').children.visible %}
+                {% if p.url != '/home/contact' %}
+                    {% set current_page = (p.active or p.activeChild) ? 'selected' : '' %}
+                        <li class="project {{ current_page }}">
+                            <a href="{{ p.url }}">
+                                {{ p.menu }}
+                            </a>
+                        </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </li>
+    <li class="part">
+        {% set contact = pages.find('/home/contact') %}
+        <a href="{{ contact.url }}">
+            {{ contact.menu }}
+        </a>
+    </li>
 </ul>
