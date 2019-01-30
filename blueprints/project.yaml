@@ -1,0 +1,37 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            header.website:
+              type: text
+              style: vertical
+              label: NIGHT_RULES.ADMIN.WEBSITE
+              ordering@: header.title
+
+            header.authors:
+              label: NIGHT_RULES.ADMIN.AUTHORS
+              type: list
+              fields:
+                .name:
+                  type: text
+                  label: PLUGIN_ADMIN.NAME
+                .website:
+                  type: text
+                  label: PLUGIN_ADMIN.SITE
+              ordering@: header.website
+
+            header.contributors:
+              label: NIGHT_RULES.ADMIN.CONTRIBUTORS
+              type: list
+              fields:
+                .name:
+                  type: text
+                  label: PLUGIN_ADMIN.NAME
+                .website:
+                  type: text
+                  label: PLUGIN_ADMIN.SITE
+              ordering@: header.authors
