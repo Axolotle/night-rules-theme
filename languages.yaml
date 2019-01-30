@@ -2,5 +2,6 @@ en:
     NIGHT_RULES:
         ADMIN:
             AUTHORS: Authors
-            WEBSITE: Website
+            WEBSITE_URL: Website URL
+            WEBSITE_TEXT: Website text
             CONTRIBUTORS: Contributors

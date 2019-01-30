@@ -1,1 +1,7 @@
 enabled: true
+default_lang: fr
+
+pages:
+  markdown:
+    extra: true
+    auto_line_breaks: true

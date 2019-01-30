@@ -6,11 +6,16 @@ form:
       fields:
         content:
           fields:
-            header.website:
+            header.websiteurl:
+              label: NIGHT_RULES.ADMIN.WEBSITE_URL
               type: text
               style: vertical
-              label: NIGHT_RULES.ADMIN.WEBSITE
               ordering@: header.title
+            header.websitetext:
+              label: NIGHT_RULES.ADMIN.WEBSITE_TEXT
+              type: text
+              style: vertical
+              ordering@: header.websiteurl
 
             header.authors:
               label: NIGHT_RULES.ADMIN.AUTHORS
@@ -22,7 +27,6 @@ form:
                 .website:
                   type: text
                   label: PLUGIN_ADMIN.SITE
-              ordering@: header.website
 
             header.contributors:
               label: NIGHT_RULES.ADMIN.CONTRIBUTORS
@@ -34,4 +38,3 @@ form:
                 .website:
                   type: text
                   label: PLUGIN_ADMIN.SITE
-              ordering@: header.authors
