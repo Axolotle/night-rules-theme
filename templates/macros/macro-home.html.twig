@@ -1,0 +1,3 @@
+{% macro list(links, last) %}
+{% for link in links %}{% if link.website %}<a href="{{ link.website }}">{{ link.name }}</a>{% else %}{{ link.name }}{% endif %}{% if loop.revindex0 == 1 %} & {% elseif not loop.last %}, {% endif %}{% endfor %}
+{% endmacro %}

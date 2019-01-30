@@ -5,7 +5,7 @@
             <h1 id="title">{{ config.site.title }}</h1>
         </a>
     </li>
-    <li class="part">
+    <li>
         <ul>
             {% for p in pages.find('/home').children.visible %}
                 {% if p.url != '/home/contact' %}
@@ -19,7 +19,7 @@
             {% endfor %}
         </ul>
     </li>
-    <li class="part">
+    <li>
         {% set contact = pages.find('/home/contact') %}
         <a href="{{ contact.url }}">
             {{ contact.menu }}

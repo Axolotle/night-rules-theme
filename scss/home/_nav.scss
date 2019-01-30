@@ -1,9 +1,15 @@
 nav {
     color: white;
-    height: 100%;
-    width: 35%;
     display: flex;
     align-items: center;
+
+    @media (orientation: landscape) {
+        height: 100%;
+        width: 30%;
+    }
+    @media (orientation: portrait) {
+        width: 100%;
+    }
 
     & > ul {
         height: 90%;
@@ -12,19 +18,23 @@ nav {
         align-items: center;
         justify-content: space-evenly;
         margin: auto;
-    }
 
-    .part {
-        a {
-            font-size: 1.3rem;
-            line-height: 1.8rem;
-            text-decoration: none;
-            padding: 0.1em 0.6em;
+        & > li {
+            @media (orientation: portrait) {
+                margin-top: 3rem;
+            }
 
-            &:hover {
-                color: black;
-                background-color: white;
-                font-weight: bold;
+            a:not(#logo) {
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+                text-decoration: none;
+                padding: 0.1em 0.6em;
+
+                &:hover {
+                    color: black;
+                    background-color: white;
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -41,6 +51,9 @@ nav {
 
     &.alone {
         width: 100%;
+        @media (orientation: portrait) {
+            height: 100%;
+        }
     }
 
     #logo img {

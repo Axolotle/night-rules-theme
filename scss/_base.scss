@@ -29,12 +29,16 @@ html, body {
 
 body {
     font-size: 1rem;
-    display: flex;
     background-color: black;
+    @media (orientation: landscape) {
+        display: flex;
+    }
+    overflow-x: hidden;
 }
 
 
 .white {
+    color: white;
     a {
         &, &:link, &:visited {
             color: white;
@@ -46,12 +50,14 @@ body {
 }
 
 .black {
+    color: black;
     a {
         &, &:link, &:visited {
             color: black;
         }
-        &:hover, &:active {
-            color: yellow;
+        &:hover, &:active, &:focus {
+            outline: none;
+            background-color: yellow;
         }
     }
 }

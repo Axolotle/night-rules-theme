@@ -1,25 +1,63 @@
 main {
-    width: 65%;
-    height: 100%;
-    margin-left: auto;
-    padding: 5rem 0;
     display: flex;
 
-    .container {
-        max-width: 50rem;
-        margin: auto;
+    @media (orientation: landscape) {
+        height: 100%;
+        width: 70%;
+        overflow-y: auto;
+        margin-left: auto;
+
+        &::before {
+            content: ' ';
+            z-index: -1;
+            border-radius: 50%;
+            background-color: white;
+            position: fixed;
+            left: 30vmax;
+            top: -30vmax;
+            width: 130vmax;
+            height: 130vmax;
+        }
+    }
+    @media (orientation: landscape) and (max-width: 1200px) {
+        width: 60%;
+    }
+    @media (orientation: portrait) {
+        width: 100%;
+        margin-top: 10rem;
+        background-color: white;
+
+        &::before {
+            content: ' ';
+            z-index: -1;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            left: -25%;
+            margin-top: -6rem;
+            width: 150vw;
+            height: 40rem;
+        }
     }
 
-    &::before {
-        content: ' ';
-        z-index: -1;
-        border-radius: 50%;
-        background-color: white;
-        position: fixed;
-        left: 30vmax;
-        top: -32.5vmax;
-        width: 130vmax;
-        height: 130vmax;
+    .container {
+        padding: 5rem;
+        margin: auto;
+        overflow-x: hidden;
+
+        @media (orientation: landscape) {
+            max-width: 50rem;
+        }
+        @media (orientation: landscape) and (max-width: 1200px) {
+            max-width: 40rem;
+        }
+        @media (orientation: portrait) {
+            max-width: 60rem;
+            min-height: 35rem;
+        }
+        @media (orientation: portrait) and (max-width: 600px) {
+            padding: 5rem 2rem;
+        }
     }
 
     h2 {
@@ -27,5 +65,82 @@ main {
         font-weight: bold;
         font-style: italic;
         border-bottom: black solid 1rem;
+    }
+
+    .authors {
+        margin-top: 0.5rem;
+    }
+
+    .website {
+        text-align: right;
+        margin-top: 2rem;
+
+        a {
+            padding: 0.5rem 1rem;
+
+            &:link, &:visited {
+                background-color: black;
+                color: white;
+            }
+            &:focus, &:active {
+                background-color: yellow;
+                color: black;
+            }
+        }
+    }
+
+    .bloc p {
+        padding: .5rem 1rem;
+        background-color: black;
+        color: white;
+        display: inline-block;
+        margin: 0;
+    }
+
+    section {
+        margin-top: 3rem;
+
+        img {
+            max-width: 100%;
+            margin: 1rem 0;
+        }
+
+        blockquote :first-child::before {
+            content: '« ';
+        }
+        blockquote :last-child::after {
+            content: ' »';
+        }
+        blockquote {
+            font-weight: bold;
+            margin: 3rem;
+        }
+
+        hr {
+            max-width: 50%;
+            border: 0;
+            border-bottom: .5rem dashed black;
+            margin: 3rem 0;
+        }
+
+        h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            display: inline-block;
+            border-bottom: .5rem solid black;
+        }
+
+        ul {
+            margin: 1rem 0;
+        }
+
+        li::before {
+            content: ' ';
+            position: relative;
+            top: -0.75rem;
+            margin-right: .5rem;
+            border-bottom: .5rem solid black;
+        }
     }
 }
