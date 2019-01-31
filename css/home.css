@@ -1,0 +1,226 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+:root {
+  font-family: Hack, monospace;
+  font-size: 0.9em;
+  color: black; }
+
+ol, ul, li {
+  list-style: none; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin: 1rem 0; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-size: 1rem;
+  background-color: black;
+  overflow-x: hidden; }
+  @media (orientation: landscape) {
+    body {
+      display: flex; } }
+
+.white {
+  color: white; }
+  .white a, .white a:link, .white a:visited {
+    color: white; }
+  .white a:hover, .white a:active {
+    color: yellow; }
+
+.black {
+  color: black; }
+  .black a, .black a:link, .black a:visited {
+    color: black; }
+  .black a:hover, .black a:active, .black a:focus {
+    outline: none;
+    background-color: yellow; }
+
+nav {
+  color: white;
+  display: flex;
+  align-items: center; }
+  @media (orientation: landscape) {
+    nav {
+      height: 100%;
+      width: 30%; } }
+  @media (orientation: portrait) {
+    nav {
+      width: 100%; } }
+  nav > ul {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto; }
+    @media (orientation: portrait) {
+      nav > ul > li {
+        margin-top: 3rem; } }
+    nav > ul > li a:not(#logo) {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      text-decoration: none;
+      padding: 0.1em 0.6em; }
+      nav > ul > li a:not(#logo):hover {
+        color: black;
+        background-color: white;
+        font-weight: bold; }
+  nav .project a {
+    display: block; }
+    nav .project a::before {
+      content: "→ "; }
+  nav.alone {
+    width: 100%; }
+    @media (orientation: portrait) {
+      nav.alone {
+        height: 100%; } }
+  nav #logo img {
+    max-width: 20rem;
+    max-height: 20rem; }
+  nav #title {
+    position: absolute;
+    top: -10em; }
+
+main {
+  display: flex; }
+  @media (orientation: landscape) {
+    main {
+      height: 100%;
+      width: 70%;
+      overflow-y: auto;
+      margin-left: auto; }
+      main::before {
+        content: ' ';
+        z-index: -1;
+        border-radius: 50%;
+        background-color: white;
+        position: fixed;
+        left: 30vmax;
+        top: -30vmax;
+        width: 130vmax;
+        height: 130vmax; } }
+  @media (orientation: landscape) and (max-width: 1200px) {
+    main {
+      width: 60%; } }
+  @media (orientation: portrait) {
+    main {
+      width: 100%;
+      margin-top: 10rem;
+      background-color: white; }
+      main::before {
+        content: ' ';
+        z-index: -1;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        left: -25%;
+        margin-top: -6rem;
+        width: 150vw;
+        height: 40rem; } }
+  main .container {
+    padding: 5rem;
+    margin: auto;
+    overflow-x: hidden; }
+    @media (orientation: landscape) {
+      main .container {
+        max-width: 50rem; } }
+    @media (orientation: landscape) and (max-width: 1200px) {
+      main .container {
+        max-width: 40rem; } }
+    @media (orientation: portrait) {
+      main .container {
+        max-width: 60rem;
+        min-height: 35rem; } }
+    @media (orientation: portrait) and (max-width: 600px) {
+      main .container {
+        padding: 5rem 2rem; } }
+  main h2 {
+    font-size: 2.75rem;
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: black solid 1rem; }
+  main .authors {
+    margin-top: 0.5rem; }
+  main .website {
+    text-align: right;
+    margin-top: 2rem; }
+    main .website a {
+      padding: 0.5rem 1rem; }
+      main .website a:link, main .website a:visited {
+        background-color: black;
+        color: white; }
+      main .website a:focus, main .website a:active {
+        background-color: yellow;
+        color: black; }
+  main .bloc p {
+    padding: .5rem 1rem;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    margin: 0; }
+  main section {
+    margin-top: 3rem; }
+    main section img {
+      max-width: 100%;
+      margin: 1rem 0; }
+    main section blockquote :first-child::before {
+      content: '« '; }
+    main section blockquote :last-child::after {
+      content: ' »'; }
+    main section blockquote {
+      font-weight: bold;
+      margin: 3rem; }
+    main section hr {
+      max-width: 50%;
+      border: 0;
+      border-bottom: .5rem dashed black;
+      margin: 3rem 0; }
+    main section h3 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+      display: inline-block;
+      border-bottom: .5rem solid black; }
+    main section ul {
+      margin: 1rem 0; }
+    main section li::before {
+      content: ' ';
+      position: relative;
+      top: -0.75rem;
+      margin-right: .5rem;
+      border-bottom: .5rem solid black; }
+
+/*┌─╴╭─╮╭╮╷╶┬╴╭─╴
+  ├─╴│ ││││ │ ╰─╮
+  ╵  ╰─╯╵╰╯ ╵ ╶─╯*/
+@font-face {
+  font-family: 'Hack';
+  src: url("../fonts/hack-regular-webfont.woff2?v=2.020") format("woff2"), url("../fonts/hack-regular-webfont.woff?v=2.020") format("woff"), url("../fonts/hack-regular-webfont.ttf?v=2.020") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Hack';
+  src: url("../fonts/hack-bold-webfont.woff2?v=2.020") format("woff2"), url("../fonts/hack-bold-webfont.woff?v=2.020") format("woff"), url("../fonts/hack-bold-webfont.ttf?v=2.020") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Hack';
+  src: url("../fonts/hack-italic-webfont.woff2?v=2.020") format("woff2"), url("../fonts/hack-italic-webfont.woff?v=2.020") format("woff"), url("../fonts/hack-italic-webfont.ttf?v=2.020") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Hack';
+  src: url("../fonts/hack-bolditalic-webfont.woff2?v=2.020") format("woff2"), url("../fonts/hack-bolditalic-webfont.woff?v=2.020") format("woff"), url("../fonts/hack-bolditalic-webfont.ttf?v=2.020") format("truetype");
+  font-weight: 700;
+  font-style: italic; }
