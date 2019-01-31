@@ -9,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include 'partials/metadata.html.twig' %}
+    <meta name="og:title" content="{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}">
+    <meta name="og:image" content="{{ url('theme://images/logo-regles-white.png', true) }}">
 
     <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
@@ -18,7 +20,7 @@
     {% endblock %}
     {{ assets.css() }}
 
-{% endblock head%}
+{% endblock head %}
 </head>
 <body class="{{ page.header.body_classes }}">
 
@@ -32,7 +34,6 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script type="text/javascript" src="{{ url('theme://js/script.js') }}"></script>
 {% endblock %}
 {{ assets.js() }}
 
