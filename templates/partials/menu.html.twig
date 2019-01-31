@@ -8,7 +8,7 @@
     <li>
         <ul>
             {% for p in pages.find('/home').children.visible %}
-                {% if p.url != '/home/contact' %}
+                {% if not ('home/contact' in p.url) %}
                     {% set current_page = (p.active or p.activeChild) ? 'selected' : '' %}
                         <li class="project {{ current_page }}">
                             <a href="{{ p.url }}">
