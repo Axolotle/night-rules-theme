@@ -68,8 +68,8 @@ nav {
       nav > ul > li {
         margin-top: 3rem; } }
     nav > ul > li a:not(#logo) {
-      font-size: 1.3rem;
-      line-height: 1.8rem;
+      font-size: 1.1rem;
+      line-height: 1.6rem;
       text-decoration: none;
       padding: 0.1em 0.6em; }
       nav > ul > li a:not(#logo):hover {
@@ -224,3 +224,5 @@ main {
   src: url("../fonts/hack-bolditalic-webfont.woff2?v=2.020") format("woff2"), url("../fonts/hack-bolditalic-webfont.woff?v=2.020") format("woff"), url("../fonts/hack-bolditalic-webfont.ttf?v=2.020") format("truetype");
   font-weight: 700;
   font-style: italic; }
+
+/*# sourceMappingURL=home.css.map */
