@@ -1,7 +1,11 @@
 {% extends 'partials/base.html.twig' %}
 {% import 'macros/macro-home.html.twig' as home %}
 
-{% block content %}
+{% block page %}
+{% if page.content %}
+<nav>
+    {% include 'partials/menu.html.twig' %}
+</nav>
 <main>
     <div class="container black">
         <h2> {{ page.title }}</h2>
@@ -9,7 +13,7 @@
             <p class="authors">{{ home.list(page.header.authors) }}{% if page.header.contributors %} avec {{ home.list(page.header.contributors) }}{% endif %}.</p>
         {% endif %}
 
-        <section>
+        <section class="content">
             {{ page.content }}
         </section>
 
@@ -22,8 +26,15 @@
         {% endif %}
     </div>
 </main>
+{% else %}
+<nav class="alone">
+    {% include 'partials/menu.html.twig' %}
+</nav>
+{% endif %}
 {% endblock %}
 
 {% block javascripts %}
+{% if page.content %}
 <script type="text/javascript" src="{{ url('theme://js/script.js') }}"></script>
+{% endif %}
 {% endblock %}

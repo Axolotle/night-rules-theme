@@ -7,16 +7,13 @@
     </li>
     <li>
         <ul>
-            {% for p in pages.find('/home').children.visible %}
-                {% if not ('home/contact' in p.url) %}
-                    {% set current_page = (p.active or p.activeChild) ? 'selected' : '' %}
-                        <li class="project {{ current_page }}">
-                            <a href="{{ p.url }}">
-                                {{ p.menu }}
-                            </a>
-                        </li>
-                {% endif %}
-            {% endfor %}
+        {% for p in pages.find('/home').collection.visible %}
+            <li class="project">
+                <a href="{{ p.url }}">
+                    {{ p.menu }}
+                </a>
+            </li>
+        {% endfor %}
         </ul>
     </li>
     <li>

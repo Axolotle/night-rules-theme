@@ -1,0 +1,122 @@
+.content {
+    margin-top: 3rem;
+
+    img {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    blockquote :first-child::before {
+        content: '« ';
+    }
+    blockquote :last-child::after {
+        content: ' »';
+    }
+    blockquote {
+        font-weight: bold;
+        margin: 3rem;
+    }
+
+    hr {
+        max-width: 50%;
+        border: 0;
+        border-bottom: .5rem dashed black;
+        margin: 3rem 0;
+    }
+
+    h3, h4 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+
+    h5, h6 {
+        margin: 1rem 0;
+        font-size: 1.25rem;
+    }
+
+    h3 {
+
+        font-size: 1.75rem;
+        display: inline-block;
+        border-bottom: .5rem solid black;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+
+    h5 {
+
+    }
+
+    h6 {
+        &::after {
+            content: ' ';
+            background-color: black;
+        }
+    }
+
+    ul {
+        margin: 1rem 0;
+    }
+    li ul {
+        margin: 0 0 0 2rem;
+    }
+    li {
+        margin-top: .25rem;
+    }
+
+    li::before {
+        content: '■';
+        margin-right: .5rem;
+    }
+    li li::before {
+        content: '□';
+    }
+    li li li::before {
+        content: '●';
+    }
+    li li li li::before {
+        content: '○';
+    }
+
+    ol > li {
+        counter-increment: step-counter;
+        &::before {
+            content: counter(step-counter);
+            background-color: black;
+            color: white;
+            padding: .1rem .25rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    pre, p code {
+        background-color: black;
+        color: white;
+    }
+    p code {
+        padding: .25rem .5rem;
+    }
+    pre {
+        padding: .5rem 1rem;
+        margin: 1rem 0;
+    }
+
+    table {
+        margin: 2rem 0;
+        border-collapse: collapse;
+        * {
+            border: .25rem solid black;
+        }
+        th, td {
+            padding: .5rem;
+        }
+        thead {
+            background-color: black;
+            color: white;
+        }
+    }
+}
