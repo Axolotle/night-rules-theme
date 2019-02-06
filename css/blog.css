@@ -1,0 +1,226 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+:root {
+  font-family: Hack, monospace;
+  font-size: 0.9em;
+  color: black; }
+
+ol, ul, li {
+  list-style: none; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin: 1rem 0; }
+
+html, body {
+  width: 100%; }
+
+body {
+  font-size: 1rem; }
+
+.white {
+  color: white; }
+  .white a, .white a:link, .white a:visited {
+    color: white; }
+  .white a:hover, .white a:active {
+    color: yellow; }
+
+.black {
+  color: black; }
+  .black a, .black a:link, .black a:visited {
+    color: black; }
+  .black a:hover, .black a:active, .black a:focus {
+    outline: none;
+    background-color: yellow; }
+
+.content {
+  margin-top: 3rem; }
+  .content img {
+    max-width: 100%;
+    margin: 1rem 0; }
+  .content blockquote :first-child::before {
+    content: '« '; }
+  .content blockquote :last-child::after {
+    content: ' »'; }
+  .content blockquote {
+    font-weight: bold;
+    margin: 3rem; }
+  .content hr {
+    max-width: 50%;
+    border: 0;
+    border-bottom: dashed black 0.5rem;
+    margin: 3rem 0; }
+  .content h3, .content h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold; }
+  .content h5, .content h6 {
+    margin: 1rem 0;
+    font-size: 1.25rem; }
+  .content h3 {
+    font-size: 1.75rem;
+    display: inline-block;
+    border-bottom: solid black 0.5rem; }
+  .content h4 {
+    font-size: 1.5rem;
+    font-style: italic; }
+  .content h6::after {
+    content: ' ';
+    background-color: black; }
+  .content ul {
+    margin: 1rem 0; }
+  .content li ul {
+    margin: 0 0 0 2rem; }
+  .content li {
+    margin-top: .25rem; }
+  .content li::before {
+    content: '■';
+    margin-right: .5rem; }
+  .content li li::before {
+    content: '□'; }
+  .content li li li::before {
+    content: '●'; }
+  .content li li li li::before {
+    content: '○'; }
+  .content ol > li {
+    counter-increment: step-counter; }
+    .content ol > li::before {
+      content: counter(step-counter);
+      background-color: black;
+      color: white;
+      padding: .1rem .25rem;
+      margin-bottom: 1rem; }
+  .content pre, .content p code {
+    background-color: black;
+    color: white; }
+  .content p code {
+    padding: 0 .5rem; }
+  .content pre {
+    padding: .5rem 1rem;
+    margin: 1rem 0; }
+  .content table {
+    margin: 2rem 0;
+    border-collapse: collapse; }
+    .content table * {
+      border: 0.25rem solid black; }
+    .content table th, .content table td {
+      padding: .5rem; }
+    .content table thead {
+      background-color: black;
+      color: white; }
+  .content sup {
+    background-color: black;
+    color: white;
+    padding: .1rem .25rem; }
+
+header #logo {
+  position: absolute;
+  top: 3rem;
+  left: 3rem; }
+  header #logo img {
+    max-width: 7rem;
+    max-height: 7rem; }
+header #title {
+  position: absolute;
+  top: -10rem; }
+header svg {
+  position: absolute;
+  width: 22.32vmax; }
+  header svg path {
+    fill: black; }
+
+main {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  background-color: white; }
+
+.content {
+  width: 70%;
+  padding: 5rem 5rem 10rem 5rem; }
+  .content h1 svg {
+    margin-left: -1rem;
+    width: 100%; }
+    .content h1 svg path {
+      vector-effect: non-scaling-stroke;
+      stroke-width: .5rem;
+      fill: transparent; }
+    .content h1 svg text {
+      font-size: 0.35rem;
+      fill: black; }
+  .content blockquote :first-child::before {
+    content: ''; }
+  .content blockquote :last-child::after {
+    content: ''; }
+  .content blockquote {
+    margin: 2rem 3rem;
+    font-style: italic;
+    color: black; }
+    .content blockquote p {
+      font-size: 1.25rem;
+      line-height: 1.5rem; }
+    .content blockquote em {
+      font-style: normal; }
+
+aside {
+  width: 25%;
+  margin-top: 10rem;
+  height: auto;
+  border-top: solid black 0.5rem; }
+
+footer {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex; }
+  footer span {
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    footer span#top {
+      height: 3rem;
+      width: 3rem; }
+    footer span#accueil {
+      height: 7rem;
+      width: 7rem; }
+    footer span a {
+      color: white; }
+
+.curve {
+  stroke: black; }
+
+/*┌─╴╭─╮╭╮╷╶┬╴╭─╴
+  ├─╴│ ││││ │ ╰─╮
+  ╵  ╰─╯╵╰╯ ╵ ╶─╯*/
+@font-face {
+  font-family: 'Hack';
+  src: url("../fonts/hack-regular-webfont.woff2?v=2.020") format("woff2"), url("../fonts/hack-regular-webfont.woff?v=2.020") format("woff"), url("../fonts/hack-regular-webfont.ttf?v=2.020") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Hack';
+  src: url("../fonts/hack-bold-webfont.woff2?v=2.020") format("woff2"), url("../fonts/hack-bold-webfont.woff?v=2.020") format("woff"), url("../fonts/hack-bold-webfont.ttf?v=2.020") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Hack';
+  src: url("../fonts/hack-italic-webfont.woff2?v=2.020") format("woff2"), url("../fonts/hack-italic-webfont.woff?v=2.020") format("woff"), url("../fonts/hack-italic-webfont.ttf?v=2.020") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Hack';
+  src: url("../fonts/hack-bolditalic-webfont.woff2?v=2.020") format("woff2"), url("../fonts/hack-bolditalic-webfont.woff?v=2.020") format("woff"), url("../fonts/hack-bolditalic-webfont.ttf?v=2.020") format("truetype");
+  font-weight: 700;
+  font-style: italic; }
+
+/*# sourceMappingURL=blog.css.map */

@@ -1,0 +1,86 @@
+main {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    background-color: $main-color;
+}
+
+.content {
+    width: 70%;
+    padding: 5rem 5rem 10rem 5rem;
+
+    h1 {
+        svg {
+            margin-left: -1rem;
+            width: 100%;
+            path {
+                vector-effect: non-scaling-stroke;
+                stroke-width: .5rem;
+                fill: transparent;
+            }
+            text {
+                font-size: 0.35rem;
+                fill: $text-color;
+            }
+        }
+    }
+
+    blockquote :first-child::before {
+        content: '';
+    }
+    blockquote :last-child::after {
+        content: '';
+    }
+    blockquote {
+        margin: 2rem 3rem;
+        font-style: italic;
+        color: $text-color;
+        p {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+        em {
+            font-style: normal;
+        }
+    }
+}
+
+aside {
+    width: 25%;
+    margin-top: 10rem;
+    height: auto;
+    border-top: solid $main-neg-color .5rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+
+    span {
+        background-color: $main-neg-color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &#top {
+            height: 3rem;
+            width: 3rem;
+        }
+        &#accueil {
+            height: 7rem;
+            width: 7rem;
+        }
+
+        a {
+            color: $text-neg-color;
+        }
+    }
+}
+
+.curve {
+    stroke: $main-neg-color;
+}

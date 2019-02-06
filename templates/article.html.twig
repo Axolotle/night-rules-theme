@@ -1,0 +1,44 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://css/blog.css') %}
+{% endblock %}
+
+{% block page %}
+<header>
+    <svg viewBox="0 0 84.834 84.834">
+      <path d="M0,0 l0,84.834 a283.46457,283.46457,0,0,1,84.371,-84.834 z"/>
+    </svg>
+    <a id="logo" href="{{ base_url == '' ? '/' : base_url }}">
+        <img src="{{ url('theme://images/logo-regles-white.png') }}" alt="{{ site.name }}">
+    </a>
+</header>
+
+<main>
+    <section class="content">
+        <h1>
+            <svg viewBox="-2 -2 102 30">
+              <path id="title-curve" d="M0,23.65 C31.35,11.1,64.95,3,100,0"/>
+              <path class="curve" d="M0,25.65 C31.35,13.1,64.95,5,100,2"/>
+              <text>
+                <textPath xlink:href="#title-curve">{{ page.title}}</textPath>
+              </text>
+            </svg>
+        </h1>
+        {{ page.content }}
+    </section>
+
+    <aside>
+    {% include 'partials/blog/aside.html.twig' %}
+    </aside>
+</main>
+
+<footer>
+    <span id="top">
+        <a href="#">top</a>
+    </span>
+    <span id="accueil">
+        <a href="#">accueil</a>
+    </span>
+</footer>
+{% endblock %}
