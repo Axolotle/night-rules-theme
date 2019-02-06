@@ -20,16 +20,10 @@ p {
   margin: 1rem 0; }
 
 html, body {
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
 
 body {
-  font-size: 1rem;
-  background-color: black;
-  overflow-x: hidden; }
-  @media (orientation: landscape) {
-    body {
-      display: flex; } }
+  font-size: 1rem; }
 
 .white {
   color: white; }
@@ -45,6 +39,18 @@ body {
   .black a:hover, .black a:active, .black a:focus {
     outline: none;
     background-color: yellow; }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+body {
+  overflow-x: hidden;
+  background-color: black;
+  height: 100%; }
+  @media (orientation: landscape) {
+    body {
+      display: flex; } }
 
 nav {
   color: white;
@@ -149,7 +155,7 @@ main {
     font-size: 2.75rem;
     font-weight: bold;
     font-style: italic;
-    border-bottom: black solid 1rem; }
+    border-bottom: solid black 1rem; }
   main .authors {
     margin-top: 0.5rem; }
   main .website {
@@ -162,7 +168,7 @@ main {
         color: white; }
       main .website a:focus, main .website a:active {
         background-color: yellow;
-        color: black; }
+        color: white; }
 
 .content {
   margin-top: 3rem; }
@@ -179,7 +185,7 @@ main {
   .content hr {
     max-width: 50%;
     border: 0;
-    border-bottom: .5rem dashed black;
+    border-bottom: dashed black 0.5rem;
     margin: 3rem 0; }
   .content h3, .content h4 {
     margin-top: 2rem;
@@ -191,7 +197,7 @@ main {
   .content h3 {
     font-size: 1.75rem;
     display: inline-block;
-    border-bottom: .5rem solid black; }
+    border-bottom: solid black 0.5rem; }
   .content h4 {
     font-size: 1.5rem;
     font-style: italic; }
@@ -225,7 +231,7 @@ main {
     background-color: black;
     color: white; }
   .content p code {
-    padding: .25rem .5rem; }
+    padding: 0 .5rem; }
   .content pre {
     padding: .5rem 1rem;
     margin: 1rem 0; }
@@ -233,12 +239,16 @@ main {
     margin: 2rem 0;
     border-collapse: collapse; }
     .content table * {
-      border: .25rem solid black; }
+      border: 0.25rem solid black; }
     .content table th, .content table td {
       padding: .5rem; }
     .content table thead {
       background-color: black;
       color: white; }
+  .content sup {
+    background-color: black;
+    color: white;
+    padding: .1rem .25rem; }
 
 /*┌─╴╭─╮╭╮╷╶┬╴╭─╴
   ├─╴│ ││││ │ ╰─╮

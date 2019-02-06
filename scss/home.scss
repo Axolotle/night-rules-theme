@@ -1,4 +1,20 @@
 @import 'base';
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: $main-neg-color;
+    height: 100%;
+
+    @media (orientation: landscape) {
+        display: flex;
+    }
+}
+
 @import 'home/nav';
 @import 'home/projects';
 @import 'content';

@@ -20,7 +20,7 @@
     hr {
         max-width: 50%;
         border: 0;
-        border-bottom: .5rem dashed black;
+        border-bottom: dashed $main-neg-color .5rem;
         margin: 3rem 0;
     }
 
@@ -39,7 +39,7 @@
 
         font-size: 1.75rem;
         display: inline-block;
-        border-bottom: .5rem solid black;
+        border-bottom: solid $main-neg-color .5rem;
     }
 
     h4 {
@@ -54,7 +54,7 @@
     h6 {
         &::after {
             content: ' ';
-            background-color: black;
+            background-color: $main-neg-color;
         }
     }
 
@@ -86,19 +86,19 @@
         counter-increment: step-counter;
         &::before {
             content: counter(step-counter);
-            background-color: black;
-            color: white;
+            background-color: $main-neg-color;
+            color: $text-neg-color;
             padding: .1rem .25rem;
             margin-bottom: 1rem;
         }
     }
 
     pre, p code {
-        background-color: black;
-        color: white;
+        background-color: $main-neg-color;
+        color: $text-neg-color;
     }
     p code {
-        padding: .25rem .5rem;
+        padding: 0 .5rem;
     }
     pre {
         padding: .5rem 1rem;
@@ -109,14 +109,20 @@
         margin: 2rem 0;
         border-collapse: collapse;
         * {
-            border: .25rem solid black;
+            border: .25rem solid $main-neg-color;
         }
         th, td {
             padding: .5rem;
         }
         thead {
-            background-color: black;
-            color: white;
+            background-color: $main-neg-color;
+            color: $text-neg-color;
         }
+    }
+
+    sup {
+        background-color: $main-neg-color;
+        color: $text-neg-color;
+        padding: .1rem .25rem;
     }
 }

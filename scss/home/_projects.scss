@@ -11,7 +11,7 @@ main {
             content: ' ';
             z-index: -1;
             border-radius: 50%;
-            background-color: white;
+            background-color: $main-color;
             position: fixed;
             left: 30vmax;
             top: -30vmax;
@@ -25,13 +25,13 @@ main {
     @media (orientation: portrait) {
         width: 100%;
         margin-top: 10rem;
-        background-color: white;
+        background-color: $main-color;
 
         &::before {
             content: ' ';
             z-index: -1;
             border-radius: 50%;
-            background-color: white;
+            background-color: $main-color;
             position: absolute;
             left: -25%;
             margin-top: -6rem;
@@ -64,7 +64,7 @@ main {
         font-size: 2.75rem;
         font-weight: bold;
         font-style: italic;
-        border-bottom: black solid 1rem;
+        border-bottom: solid $main-neg-color 1rem;
     }
 
     .authors {
@@ -79,12 +79,12 @@ main {
             padding: 0.5rem 1rem;
 
             &:link, &:visited {
-                background-color: black;
-                color: white;
+                background-color: $main-neg-color;
+                color: $text-neg-color;
             }
             &:focus, &:active {
-                background-color: yellow;
-                color: black;
+                background-color: $alt-color;
+                color: $text-neg-color;
             }
         }
     }
