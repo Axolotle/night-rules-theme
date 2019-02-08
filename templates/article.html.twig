@@ -13,6 +13,16 @@
     </h1>
     {{ page.content }}
 
+    {% if page.taxonomy.category %}
+    <ul class="tags">
+        <span>Catégories :</span>
+        {% for category in page.taxonomy.category %}
+        <li>
+            <a href="{{ blog.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
     {% if page.taxonomy.tag %}
     <ul class="tags">
         <span>Tags :</span>
@@ -24,6 +34,23 @@
     </ul>
     {% endif %}
 </div>
+{% endblock %}
+
+{% block pagination %}
+<ul>
+    {% if not page.isFirst %}
+        <li class="next">
+            <a href="{{ page.nextSibling.url }}"><i></i> {{ 'NIGHT_RULES.ARTICLE.NEXT_POST'|t }}</a>
+        </li>
+
+    {% endif %}
+
+    {% if not page.isLast %}
+        <li class="prev">
+            <a href="{{ page.prevSibling.url }}">{{ 'NIGHT_RULES.ARTICLE.PREV_POST'|t }}</a>
+        </li>
+    {% endif %}
+</ul>
 {% endblock %}
 
 {% endembed %}

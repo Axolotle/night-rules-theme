@@ -54,6 +54,38 @@ header {
 }
 
 footer {
+    width: 80%;
+    margin: auto;
+    padding: 0 5rem 3rem 5rem;
+
+    nav.pagination {
+        ul {
+            display: flex;
+        }
+
+        li {
+            margin-right: 0.5rem;
+            span, a {
+                padding: 0.25rem 0.50rem;
+            }
+        }
+
+        .current {
+            border: 0.15rem solid $alt-color;
+            padding: 0.10rem 0.35rem;
+        }
+
+        a[rel] {
+            background-color: $main-neg-color;
+            color: $text-neg-color;
+            &:hover, &:active, &:focus {
+                color: $text-color;
+                background-color: $alt-color;
+            }
+        }
+
+    }
+    
     span#top {
         position: fixed;
         bottom: 1.5rem;

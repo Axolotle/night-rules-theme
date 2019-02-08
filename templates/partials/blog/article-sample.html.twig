@@ -5,11 +5,11 @@
         </time>
         <h2><a href="{{ page.url }}" class="u-url">{{ page.title }}</a></h2>
 
-        {% if page.taxonomy.tag %}
-        <ul class="tags">
-            {% for tag in page.taxonomy.tag %}
+        {% if page.taxonomy.category %}
+        <ul class="tags inline">
+            {% for category in page.taxonomy.category %}
             <li>
-                <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+                <a href="{{ blog.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
             </li>
             {% endfor %}
         </ul>
