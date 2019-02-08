@@ -9,7 +9,7 @@
         <ul>
         {% for p in pages.find('/home').collection.visible %}
             <li class="project">
-                <a href="{{ p.url }}">
+                <a href="{{ p.url ~ '#top' }}">
                     {{ p.menu }}
                 </a>
             </li>
@@ -18,7 +18,7 @@
     </li>
     <li>
         {% set contact = pages.find('/home/contact') %}
-        <a href="{{ contact.url }}">
+        <a href="{{ contact.url ~ '#top' }}">
             {{ contact.menu }}
         </a>
     </li>

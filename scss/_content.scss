@@ -1,20 +1,21 @@
 .content {
-    margin-top: 3rem;
-
     img {
         max-width: 100%;
         margin: 1rem 0;
     }
 
-    blockquote :first-child::before {
-        content: '« ';
-    }
-    blockquote :last-child::after {
-        content: ' »';
-    }
     blockquote {
+        margin: 2rem 3rem;
+        font-style: italic;
         font-weight: bold;
-        margin: 3rem;
+        color: $text-color;
+        p {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+        em {
+            font-style: normal;
+        }
     }
 
     hr {
@@ -36,10 +37,13 @@
     }
 
     h3 {
-
         font-size: 1.75rem;
         display: inline-block;
         border-bottom: solid $main-neg-color .5rem;
+
+        a {
+            text-decoration: none;
+        }
     }
 
     h4 {

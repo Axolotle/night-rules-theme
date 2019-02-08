@@ -61,3 +61,19 @@ body {
         }
     }
 }
+
+:not(img)::-moz-selection {
+  color: $text-color;
+  background-color: $alt-color;
+}
+:not(img)::selection {
+  color: $text-color;
+  background-color: $alt-color;
+}
+img::-moz-selection {
+  background-color: transparent;
+}
+
+img::selection {
+  background-color: transparent;
+}
