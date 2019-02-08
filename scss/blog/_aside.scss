@@ -1,8 +1,13 @@
 aside {
-    width: 25%;
-    margin-top: 7rem;
-    height: auto;
+    margin-top: calc(8vmax - 2.5rem);
+    position: sticky;
+    top: 6rem;
+    height: 20rem;
     border-top: dashed $main-neg-color .5rem;
+
+    @media (orientation: landscape) {
+        width: 25%;
+    }
 
     section {
         margin-bottom: 4rem;

@@ -1,13 +1,28 @@
 main {
     width: 80%;
-    display: flex;
-    justify-content: space-between;
     margin: auto;
 
+    @media (orientation: landscape) {
+        display: flex;
+        justify-content: space-between;
+    }
+    @media (max-width: 400px) {
+        width: 90%;
+    }
+
     .container {
-        width: 70%;
+        margin-top: 12vmax;
         max-width: 60rem;
-        margin: 8vmax 5rem 5rem 5rem;
+        @media (orientation: landscape) {
+            width: 70%;
+            margin: 8vmax 5rem 5rem 5rem;
+        }
+        @media (orientation: landscape) and (max-width: 1200px) {
+            margin: 8vmax 5rem 5rem 0;
+        }
+        @media (max-width: 400px) {
+            margin-top: 12vmax;
+        }
     }
 
     article {
@@ -20,9 +35,11 @@ main {
 .content {
     h1 {
         svg {
-            margin-left: -1rem;
             margin-top: -4rem;
             width: 100%;
+            @media (min-width: 600px) {
+                margin-left: -1rem;
+            }
             path {
                 vector-effect: non-scaling-stroke;
                 stroke-width: .5rem;

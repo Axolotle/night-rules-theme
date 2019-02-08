@@ -27,7 +27,13 @@
     {% for child in collection %}
         {% include 'partials/blog/article-sample.html.twig' with {'blog':page, 'page':child, 'truncate':true} %}
     {% endfor %}
+        <nav class="pagination black">
+        {% if config.plugins.pagination.enabled and collection.params.pagination %}
+            {% include 'partials/blog/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
+        {% endif %}
+        </nav>
     </div>
+
 {% endblock %}
 
     {% include 'partials/blog/aside.html.twig' %}
@@ -36,14 +42,6 @@
 
 
 <footer>
-    <nav class="pagination black">
-    {% block pagination %}
-    {% if config.plugins.pagination.enabled and collection.params.pagination %}
-        {% include 'partials/blog/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
-    {% endif %}
-    {% endblock %}
-    </nav>
-
     <span id="top">
         <a href="#">top</a>
     </span>

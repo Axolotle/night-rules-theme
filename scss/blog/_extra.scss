@@ -32,25 +32,67 @@ header {
     }
 
     ul {
-        position: fixed;
-        top: 0;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        font-size: 1.5rem;
         font-weight: bold;
-        width: 100%;
+        width: 50%;
+        margin-left: 50%;
+
+        @media (orientation: landscape) {
+            position: fixed;
+            top: 0;
+            font-size: 1.5rem;
+        }
 
         li {
             text-align: right;
             display: inline;
             a {
                 display: block;
-                padding: 1.5rem 3rem;
+                padding: 1rem;
                 background-color: $main-color;
+                @media (min-width: 600px) {
+                    padding: 1.5rem 2rem;
+                }
             }
         }
     }
+}
+
+nav.pagination {
+    margin-top: 4rem;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        margin-right: 0.5rem;
+        span, a {
+            padding: 0.25rem 0.50rem;
+        }
+
+        &::before {
+            content: '';
+            margin: 0;
+        }
+    }
+
+    .current {
+        border: 0.15rem solid $alt-color;
+        padding: 0.10rem 0.35rem;
+    }
+
+    a[rel] {
+        background-color: $main-neg-color;
+        color: $text-neg-color;
+        &:hover, &:active, &:focus {
+            color: $text-color;
+            background-color: $alt-color;
+        }
+    }
+
 }
 
 footer {
@@ -58,34 +100,6 @@ footer {
     margin: auto;
     padding: 0 5rem 3rem 5rem;
 
-    nav.pagination {
-        ul {
-            display: flex;
-        }
-
-        li {
-            margin-right: 0.5rem;
-            span, a {
-                padding: 0.25rem 0.50rem;
-            }
-        }
-
-        .current {
-            border: 0.15rem solid $alt-color;
-            padding: 0.10rem 0.35rem;
-        }
-
-        a[rel] {
-            background-color: $main-neg-color;
-            color: $text-neg-color;
-            &:hover, &:active, &:focus {
-                color: $text-color;
-                background-color: $alt-color;
-            }
-        }
-
-    }
-    
     span#top {
         position: fixed;
         bottom: 1.5rem;
@@ -99,6 +113,10 @@ footer {
         border-radius: 50%;
         a {
             color: $text-neg-color;
+        }
+
+        @media (max-width: 800px) {
+            display: none;
         }
     }
 

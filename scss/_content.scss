@@ -6,6 +6,9 @@
 
     blockquote {
         margin: 2rem 3rem;
+        @media (max-width: 600px) {
+            margin: 1.5rem 1rem;
+        }
         font-style: italic;
         font-weight: bold;
         color: $text-color;
