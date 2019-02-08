@@ -1,0 +1,30 @@
+{% set mainblog = pages.find('/blog') %}
+
+<aside class="content black">
+    <section>
+        <h3 class="hot">Actu</h3>
+        {{ mainblog.content }}
+    </section>
+
+    <section>
+        <h3>Derniers posts</h3>
+        <ul>
+        {% for post in mainblog.collection|slice(0, 5) %}
+            <li>
+                <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a>
+            </li>
+        {% endfor %}
+        </ul>
+    </section>
+
+    <section>
+        <h3>Catégories</h3>
+        <ul>
+        {% for category in taxonomy.taxonomy['category']|keys|sort %}
+            <li>
+                <a href="{{ mainblog.url|rtrim('/') ~ '/category' ~ config.system.param_sep ~ category }}">{{ category }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </section>
+</aside>
