@@ -1,0 +1,33 @@
+<article class="sample content black">
+        <time datetime="{{ page.date|date("c") }}">
+            <span>{{ page.date|date("d") }}</span>
+            <em>{{ 'MONTHS_OF_THE_YEAR_ABBR'|ta(page.date|date('n') - 1) }}</em>
+        </time>
+        <h2><a href="{{ page.url }}" class="u-url">{{ page.title }}</a></h2>
+
+        {% if page.taxonomy.tag %}
+        <ul class="tags">
+            {% for tag in page.taxonomy.tag %}
+            <li>
+                <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+    {% if truncate and page.summary != page.content %}
+        <div>
+            {{ page.summary }}
+            <p><a href="{{ page.url }}">{{ 'NIGHT_RULES.ARTICLE.CONTINUE_READING'|t }}</a></p>
+        </div>
+    {% elseif truncate %}
+        <div>
+            {{ page.content }}
+            <p><a href="{{ page.url }}">{{ 'NIGHT_RULES.ARTICLE.CONTINUE_READING'|t }}</a></p>
+        </div>
+    {% else %}
+        <div>
+            {{ page.content }}
+        </div>
+    {% endif %}
+</article>

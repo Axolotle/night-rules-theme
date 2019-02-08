@@ -5,3 +5,15 @@ en:
             WEBSITE_URL: Website URL
             WEBSITE_TEXT: Website text
             CONTRIBUTORS: Contributors
+        BLOG:
+
+        ARTICLE:
+          CONTINUE_READING: Continue reading
+fr:
+    MONTHS_OF_THE_YEAR: [Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Août, Septembre, Octobre, Novembre, Décembre]
+    MONTHS_OF_THE_YEAR_ABBR: [Jan, Fév, Mar, Avr, Mai, Jun, Jul, Aoû, Sep, Oct, Nov, Déc]
+    NIGHT_RULES:
+        ARTICLE:
+          CONTINUE_READING: Continuer la lecture
+          NEXT_POST: Post suivant
+          PREV_POST: Post précédent

@@ -1,0 +1,74 @@
+header {
+    width: 100%;
+    height: 4rem;
+
+    svg {
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        width: 22vmax;
+        path {
+            fill: $main-neg-color;
+        }
+    }
+
+    #logo {
+        position: absolute;
+        top: 2.5vmax;
+        left: 2.5vmax;
+        img {
+            max-width: 6vmax;
+            max-height: 6vmax;
+        }
+    }
+
+    #title {
+        position: absolute;
+        top: -10rem;
+    }
+
+    #home {
+        font-weight: bold;
+    }
+
+    ul {
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 100%;
+
+        li {
+            text-align: right;
+            display: inline;
+            a {
+                display: block;
+                padding: 1.5rem 3rem;
+                background-color: $main-color;
+            }
+        }
+    }
+}
+
+footer {
+    span#top {
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        width: 3rem;
+        background-color: $main-neg-color;
+        border-radius: 50%;
+        a {
+            color: $text-neg-color;
+        }
+    }
+
+
+}

@@ -1,6 +1,6 @@
 $main-color: white;
 $main-neg-color: black;
-$alt-color: yellow;
+$alt-color: #4dffd2;
 $text-color: black;
 $text-neg-color: white;
 
@@ -64,11 +64,11 @@ body {
 
 :not(img)::-moz-selection {
   color: $text-color;
-  background-color: $alt-color;
+  background-color: #4dffd2;
 }
 :not(img)::selection {
   color: $text-color;
-  background-color: $alt-color;
+  background-color: #4dffd2;
 }
 img::-moz-selection {
   background-color: transparent;

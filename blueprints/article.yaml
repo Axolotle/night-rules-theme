@@ -18,3 +18,7 @@ form:
                   multiple: true
                   validate:
                     type: array
+        options:
+          fields:
+            taxonomies:
+              unset@: true
