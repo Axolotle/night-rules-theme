@@ -1,19 +1,22 @@
 en:
-    NIGHT_RULES:
-        ADMIN:
-            AUTHORS: Authors
-            WEBSITE_URL: Website URL
-            WEBSITE_TEXT: Website text
-            CONTRIBUTORS: Contributors
-        BLOG:
+  NIGHT_RULES:
+    ADMIN:
+      ARTICLE_TITLE: "Article title"
+      ARTICLE_TITLE_HELP: "The title of the article"
+      PROJECT_TITLE: "Project title"
+      PROJECT_TITLE_HELP: "The title of the project"
+      AUTHORS: "Authors"
+      WEBSITE_URL: "Website URL"
+      WEBSITE_TEXT: "Website text"
+      CONTRIBUTORS: "Contributors"
 
-        ARTICLE:
-          CONTINUE_READING: Continue reading
+    ARTICLE:
+      CONTINUE_READING: Continue reading
 fr:
-    MONTHS_OF_THE_YEAR: [Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Août, Septembre, Octobre, Novembre, Décembre]
-    MONTHS_OF_THE_YEAR_ABBR: [Jan, Fév, Mar, Avr, Mai, Jun, Jul, Aoû, Sep, Oct, Nov, Déc]
-    NIGHT_RULES:
-        ARTICLE:
-          CONTINUE_READING: Continuer la lecture
-          NEXT_POST: Post suivant
-          PREV_POST: Post précédent
+  MONTHS_OF_THE_YEAR: [Janvier, Février, Mars, Avril, Mai, Juin, Juillet, Août, Septembre, Octobre, Novembre, Décembre]
+  MONTHS_OF_THE_YEAR_ABBR: [Jan, Fév, Mar, Avr, Mai, Jun, Jul, Aoû, Sep, Oct, Nov, Déc]
+  NIGHT_RULES:
+    ARTICLE:
+      CONTINUE_READING: "Continuer la lecture"
+      NEXT_POST: "Post suivant"
+      PREV_POST: "Post précédent"

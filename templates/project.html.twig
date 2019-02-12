@@ -1,0 +1,28 @@
+{% extends 'partials/base.html.twig' %}
+{% import 'macros/macro-home.html.twig' as home %}
+
+{% block page %}
+<nav>
+    {% include 'partials/menu.html.twig' %}
+</nav>
+<main id="top">
+    <div class="container black">
+        <h2>{{ page.title }}</h2>
+        {% if page.header.authors %}
+            <p class="authors">{{ home.list(page.header.authors) }}{% if page.header.contributors %} avec {{ home.list(page.header.contributors) }}{% endif %}.</p>
+        {% endif %}
+
+        <section class="content">
+            {{ page.content }}
+        </section>
+
+        {% if page.header.websiteurl %}
+            <p class="website">
+                <a href="{{ page.header.websiteurl }}">
+                    {{ page.header.websitetext ? page.header.websitetext : page.header.website|basename }}
+                </a>
+            </p>
+        {% endif %}
+    </div>
+</main>
+{% endblock %}

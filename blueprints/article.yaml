@@ -6,6 +6,18 @@ form:
       fields:
         content:
           fields:
+            header.visible:
+              type: toggle
+              toggleable: true
+              label: PLUGIN_ADMIN.VISIBLE
+              help: PLUGIN_ADMIN.VISIBLE_HELP
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+              ordering@: 1
+
             taxonomies:
               type: section
               title: PLUGIN_ADMIN.TAXONOMIES
@@ -22,3 +34,9 @@ form:
           fields:
             taxonomies:
               unset@: true
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.visible:
+                  unset@: true
