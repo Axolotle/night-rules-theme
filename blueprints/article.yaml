@@ -8,9 +8,10 @@ form:
           fields:
             header.visible:
               type: toggle
-              toggleable: true
               label: PLUGIN_ADMIN.VISIBLE
               help: PLUGIN_ADMIN.VISIBLE_HELP
+              highlight: 1
+              default: 0
               options:
                 1: PLUGIN_ADMIN.ENABLED
                 0: PLUGIN_ADMIN.DISABLED

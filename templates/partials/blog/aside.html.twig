@@ -9,7 +9,7 @@
     <section>
         <h3>Derniers posts</h3>
         <ul>
-        {% for post in mainblog.collection|slice(0, 5) %}
+        {% for post in mainblog.collection.visible|slice(0, 5) %}
             <li>
                 <a href="{{ post.url }}"><strong>{{ post.title }}</strong></a>
             </li>
