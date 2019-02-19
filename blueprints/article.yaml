@@ -31,6 +31,12 @@ form:
                   multiple: true
                   validate:
                     type: array
+            header.image:
+              label: image réseaux sociaux
+              type: filepicker
+              folder: '@self'
+              preview_images: true
+              style: vertical
         options:
           fields:
             taxonomies:

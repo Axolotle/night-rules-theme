@@ -52,7 +52,9 @@ form:
                   label: PLUGIN_ADMIN.SITE
             header.image:
               label: image réseaux sociaux
-              type: text
+              type: filepicker
+              folder: '@self'
+              preview_images: true
               style: vertical
             header.metadata:
               toggleable: true
