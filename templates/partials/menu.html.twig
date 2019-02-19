@@ -17,9 +17,16 @@
         </ul>
     </li>
     <li>
-        {% set contact = pages.find('/home/contact') %}
-        <a href="{{ contact.url ~ '#top' }}">
-            {{ contact.menu }}
-        </a>
+        <ul>
+        {% for p in pages.children.visible %}
+            {% if p.menu != 'Home'%}
+            <li>
+                <a href="{{ p.url ~ '#top' }}">
+                    {{ p.menu }}
+                </a>
+            </li>
+            {% endif %}
+        {% endfor %}
+        </ul>
     </li>
 </ul>
